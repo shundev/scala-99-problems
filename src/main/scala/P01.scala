@@ -5,10 +5,10 @@
 // res0: Int = 8
 
 object P01 {
-  def last[T](list: Seq[T]): T = list match {
+  def last[T](list: List[T]): T = list match {
     case x :: Nil => x
-    case x :: xs  => last(xs)
-    case _        => sys.error("last isn't defined for empty list")
+    case x :: xs => last(xs)
+    case _ => sys.error("no elements")
   }
 }
 
