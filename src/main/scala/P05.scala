@@ -11,8 +11,8 @@ object P05 {
   def reverse[T](list: List[T]): List[T] = {
     @tailrec
     def rec[T](lst: List[T], acc: List[T]): List[T] = lst match {
-      case Nil => acc
-      case x::xs => rec(xs, x :: acc)
+      case Nil     => acc
+      case x :: xs => rec(xs, x :: acc)
     }
 
     rec(list, Nil)

@@ -7,9 +7,9 @@
 
 object P02 {
   def penultimate[T](list: List[T]): T = list match {
-    case x::Nil => sys.error("no elements.")
-    case x::y::Nil => y
-    case x::y::xs => penultimate(xs)
-    case _ => sys.error("no elements.")
+    case x :: Nil      => sys.error("no elements.")
+    case x :: y :: Nil => y
+    case x :: y :: xs  => penultimate(xs)
+    case _             => sys.error("no elements.")
   }
 }

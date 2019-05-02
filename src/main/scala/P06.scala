@@ -7,7 +7,5 @@
 import scala.annotation.tailrec;
 
 object P06 {
-  def isPalindrome[T](list: List[T]): Boolean = list match {
-    case _ => true;
-  }
+  def isPalindrome[T](list: List[T]): Boolean = list == list.reverse
 }
